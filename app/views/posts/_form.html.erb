@@ -1,0 +1,6 @@
+<%= form_with model: post do |f| %>
+  <%= f.text_field :title, placeholder: "Title" %>
+  <%= f.text_area :description, placeholder: "Description", size: "40x10" %>
+  <%= f.rich_text_area :content %>
+  <%= f.submit "Create" %>
+<% end %>
