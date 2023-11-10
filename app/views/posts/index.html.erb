@@ -1,1 +1,13 @@
-<%= render 'posts', posts: @posts %>
+<% unless posts.empty? %>
+  <%= link_to "Create post", new_post_path %>
+  
+  <% posts.each do |p| %>
+    <%= render post %>
+    <p>
+      <%= link_to "show", post_path(p.id) %>
+    </p>
+  <% end %>
+<% else%>
+  <p>Nothing to show</p>
+  <%= link_to "Create post", new_post_path %>
+<% end %>
