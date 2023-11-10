@@ -1,10 +1,9 @@
-<% unless posts.empty? %>
+<% unless @posts.empty? %>
   <%= link_to "Create post", new_post_path %>
-  
-  <% posts.each do |p| %>
+  <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "show", post_path(p.id) %>
+      <%= link_to "show", post_path(post.id) %>
     </p>
   <% end %>
 <% else%>
