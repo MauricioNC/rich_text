@@ -1,0 +1,12 @@
+<% unless posts.empty? %>
+  <% posts.each do |p| %>
+    <div>
+      <h3><%= p.tile %></h3>
+    </div>
+    <div>
+      <h3><%= p.description %></h3>
+    </div>
+  <% end %>
+<% else%>
+  <p>Nothing to show</p>
+<% end %>
